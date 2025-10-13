@@ -39,8 +39,8 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
   `,
   styles: [`
     .skills-hero {
-      padding: 3rem 0 2rem;
-      background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+      padding: 2rem 0 2rem;
+      background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
       color: white;
       text-align: center;
     }
@@ -58,35 +58,36 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
 
     .skills-details {
       padding: 2.5rem 0;
-      background: #f8f9fa;
+      background: #475569;
       opacity: 1; /* Ensure visibility even without animation */
     }
 
     .skills-categories {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
     }
 
     .skill-category {
-      background: white;
+      background: #334155;
       padding: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       opacity: 1; /* Ensure visibility even without animation */
+      border: 1px solid #475569;
     }
 
     .skill-category:hover {
       transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
 
     .category-title {
       font-size: 1.2rem;
       font-weight: 600;
       margin-bottom: 1rem;
-      color: #333;
+      color: #f1f5f9;
       text-align: center;
     }
 
@@ -110,27 +111,34 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
 
     .skill-name {
       font-weight: 500;
-      color: #333;
+      color: #f1f5f9;
     }
 
     .skill-level {
       font-size: 0.9rem;
-      color: #1a365d;
+      color: #60a5fa;
       font-weight: 600;
     }
 
     .skill-bar {
       height: 8px;
-      background: #e9ecef;
+      background: #64748b;
       border-radius: 4px;
       overflow: hidden;
     }
 
     .skill-progress {
       height: 100%;
-      background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+      background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
       border-radius: 4px;
       transition: width 1s ease-in-out;
+    }
+
+    @media (max-width: 1200px) {
+      .skills-categories {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
     }
 
     @media (max-width: 768px) {

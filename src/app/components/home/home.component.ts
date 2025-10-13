@@ -37,7 +37,7 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
           <div class="hero-image">
             <div class="image-container">
               <div class="profile-image">
-                <i class="fas fa-user-circle"></i>
+                <img src="assets/image/1.jpg" alt="MD Shehab Hossain" class="profile-img">
               </div>
               <div class="floating-elements">
                 <div class="floating-element element-1">
@@ -80,7 +80,7 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
       </div>
     </section>
 
-    <section class="cta-section scroll-animate">
+    <!-- <section class="cta-section scroll-animate">
       <div class="container">
         <div class="cta-content">
           <h2 class="cta-title">Ready to Start Your Next Project?</h2>
@@ -90,7 +90,7 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
           <a href="#contact" class="btn btn-primary btn-large">Let's Talk</a>
         </div>
       </div>
-    </section>
+    </section> -->
   `,
   styles: [`
     .hero {
@@ -98,7 +98,7 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
       display: flex;
       align-items: center;
       position: relative;
-      background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+      background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
       color: white;
       overflow: hidden;
       padding: 100px 0 60px;
@@ -262,10 +262,16 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 8rem;
-      color: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(10px);
       border: 2px solid rgba(255, 255, 255, 0.2);
+      overflow: hidden;
+    }
+
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
 
     .floating-elements {
@@ -348,16 +354,16 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
     }
 
     .skills-preview {
-      padding: 4rem 0;
-      background: #f8f9fa;
+      padding: 2rem 0;
+      background: #334155;
     }
 
     .section-title {
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 700;
       margin-bottom: 3rem;
-      color: #333;
+      color: #f1f5f9;
     }
 
     .skills-grid {
@@ -369,10 +375,11 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
     .skill-item {
       text-align: center;
       padding: 2rem;
-      background: white;
+      background: #1e293b;
       border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease;
+      border: 1px solid #475569;
     }
 
     .skill-item:hover {
@@ -383,7 +390,7 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
       width: 80px;
       height: 80px;
       margin: 0 auto 1rem;
-      background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+      background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -403,17 +410,17 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
       font-size: 1.3rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
-      color: #333;
+      color: #f1f5f9;
     }
 
     .skill-description {
-      color: #666;
+      color: #cbd5e1;
       line-height: 1.6;
     }
 
     .cta-section {
       padding: 2rem 0;
-      background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+      background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
       color: white;
       text-align: center;
     }
@@ -441,7 +448,7 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
       }
 
       .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
 
       .hero-buttons {

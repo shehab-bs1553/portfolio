@@ -20,7 +20,7 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
       <div class="container">
         <div class="about-grid">
           <div class="about-text scroll-animate-left">
-            <h2 class="section-title">My Story</h2>
+            <!-- <h2 class="section-title">My Story</h2> -->
             <p class="about-description">
               I'm a Software Engineer I at Brain Station-23 PLC, specializing in scalable .NET API 
               development, NopCommerce plugin development, and AI-driven solutions. With a strong 
@@ -32,8 +32,10 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
               creating containerized deployments with Docker and MCP server management.
             </p>
             <p class="about-description">
-              As a competitive programmer, I've solved 3,000+ algorithmic problems on LeetCode (Knight) 
-              and Codeforces (Pupil), continuously exploring emerging technologies in AI and cloud-native architectures.
+              As a competitive programmer, I've solved 3,000+ algorithmic problems across multiple platforms including 
+              LeetCode (Knight - Max rating: 1923), Codeforces (Pupil - Max rating: 1363), TopH, CSES, CodeChef, 
+              HackerRank, and HackerEarth. This extensive problem-solving experience has strengthened my algorithmic 
+              thinking and coding efficiency.
             </p>
           </div>
           
@@ -41,7 +43,7 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
             <div class="image-container">
               <div class="profile-card">
                 <div class="profile-avatar">
-                  <i class="fas fa-user-circle"></i>
+                  <img src="assets/image/1.jpg" alt="MD Shehab Hossain" class="profile-img">
                 </div>
                 <h3 class="profile-name">MD Shehab Hossain</h3>
                 <p class="profile-title">Software Engineer I</p>
@@ -55,7 +57,7 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
                     <span class="stat-label">Years Experience</span>
                   </div>
                   <div class="stat">
-                    <span class="stat-number">3.42</span>
+                    <span class="stat-number">3.41</span>
                     <span class="stat-label">CGPA</span>
                   </div>
                 </div>
@@ -70,7 +72,7 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
   styles: [`
     .about-hero {
       padding: 2.5rem 0 2rem;
-      background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+      background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
       color: white;
       text-align: center;
     }
@@ -88,6 +90,7 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
 
     .about-details {
       padding: 2.5rem 0;
+      background: #334155;
     }
 
     .about-grid {
@@ -101,45 +104,55 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
       font-size: 1.8rem;
       font-weight: 600;
       margin-bottom: 1.2rem;
-      color: #333;
+      color: #f1f5f9;
     }
 
     .about-description {
       font-size: 1rem;
       line-height: 1.6;
       margin-bottom: 1rem;
-      color: #666;
+      color: #cbd5e1;
     }
 
     .profile-card {
-      background: white;
+      background: #334155;
       border-radius: 20px;
       padding: 2rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       text-align: center;
+      border: 1px solid #475569;
     }
 
     .profile-avatar {
-      font-size: 4rem;
-      color: #1a365d;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
       margin-bottom: 1rem;
       transition: all 0.3s ease;
+      border: 3px solid #60a5fa;
+    }
+
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .profile-card:hover .profile-avatar {
-      color: #ffc107;
       transform: scale(1.1);
+      border-color: #ffc107;
     }
 
     .profile-name {
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
-      color: #333;
+      color: #f1f5f9;
     }
 
     .profile-title {
-      color: #666;
+      color: #cbd5e1;
       margin-bottom: 2rem;
     }
 
@@ -157,12 +170,12 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
       display: block;
       font-size: 1.5rem;
       font-weight: 700;
-      color: #1a365d;
+      color: #60a5fa;
     }
 
     .stat-label {
       font-size: 0.9rem;
-      color: #666;
+      color: #cbd5e1;
     }
 
 
@@ -252,7 +265,7 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
 
     .cta-section {
       padding: 5rem 0;
-      background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+      background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
       color: white;
       text-align: center;
     }
@@ -349,8 +362,14 @@ export class AboutComponent implements OnInit {
     {
       title: 'B.Sc. in Computer Science and Engineering',
       date: '2019 - 2024',
-      description: 'Graduated from Gopalganj Science and Technology University with CGPA 3.42/4.00. Focused on software engineering principles and algorithmic problem solving.',
+      description: 'Graduated from Gopalganj Science and Technology University with CGPA 3.41/4.00. Focused on software engineering principles and algorithmic problem solving.',
       tags: ['Computer Science', 'Software Engineering', 'Data Structures', 'Algorithms']
+    },
+    {
+      title: 'Higher Secondary Certificate (HSC)',
+      date: '2016 - 2018',
+      description: 'Completed HSC from Monipur Uchcha Vidyalaya and College. Studied Science group with focus on Mathematics, Physics, and Chemistry.',
+      tags: ['Science', 'Mathematics', 'Physics', 'Chemistry']
     }
   ];
 

@@ -157,14 +157,14 @@ import { FormsModule } from '@angular/forms';
   `,
   styles: [`
     .contact-hero {
-      padding: 4rem 0 3rem;
-      background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+      padding: 2rem 0 2rem;
+      background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
       color: white;
       text-align: center;
     }
 
     .page-title {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 700;
       margin-bottom: 0.8rem;
     }
@@ -175,28 +175,39 @@ import { FormsModule } from '@angular/forms';
     }
 
     .contact-details {
-      padding: 3rem 0;
+      padding: 2rem 0;
+      background: #475569;
+      border-top: 1px solid #64748b;
+      border-bottom: 1px solid #64748b;
+      margin: 2rem 0;
     }
 
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+      gap: 3rem;
       align-items: start;
+    }
+
+    .contact-info {
+      padding: 2rem;
+      background: #334155;
+      border-radius: 15px;
+      border: 1px solid #64748b;
     }
 
     .section-title {
       font-size: 2.5rem;
       font-weight: 700;
       margin-bottom: 2rem;
-      color: #333;
+      color: #f1f5f9;
     }
 
     .contact-description {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 3rem;
-      color: #666;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      color: #cbd5e1;
     }
 
     .contact-methods {
@@ -208,9 +219,10 @@ import { FormsModule } from '@angular/forms';
       align-items: center;
       margin-bottom: 1rem;
       padding: 1rem;
-      background: #f8f9fa;
+      background: #334155;
       border-radius: 10px;
       transition: transform 0.3s ease;
+      border: 1px solid #475569;
     }
 
     .contact-method:hover {
@@ -220,7 +232,7 @@ import { FormsModule } from '@angular/forms';
     .method-icon {
       width: 50px;
       height: 50px;
-      background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+      background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -241,11 +253,11 @@ import { FormsModule } from '@angular/forms';
       font-size: 1rem;
       font-weight: 600;
       margin-bottom: 0.3rem;
-      color: #333;
+      color: #f1f5f9;
     }
 
     .method-value {
-      color: #666;
+      color: #cbd5e1;
       margin: 0;
       font-size: 0.9rem;
     }
@@ -258,7 +270,7 @@ import { FormsModule } from '@angular/forms';
       font-size: 1.3rem;
       font-weight: 600;
       margin-bottom: 1rem;
-      color: #333;
+      color: #f1f5f9;
     }
 
     .social-icons {
@@ -270,7 +282,7 @@ import { FormsModule } from '@angular/forms';
     .social-link {
       width: 50px;
       height: 50px;
-      background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+      background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
       color: white;
       border-radius: 50%;
       display: flex;
@@ -279,7 +291,7 @@ import { FormsModule } from '@angular/forms';
       text-decoration: none;
       font-size: 1.2rem;
       transition: all 0.3s ease;
-      box-shadow: 0 2px 8px rgba(26, 54, 93, 0.3);
+      box-shadow: 0 2px 8px rgba(96, 165, 250, 0.3);
     }
 
     .social-link:hover {
@@ -290,17 +302,18 @@ import { FormsModule } from '@angular/forms';
     }
 
     .contact-form-container {
-      background: white;
+      background: #334155;
       padding: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+      border: 1px solid #475569;
     }
 
     .form-title {
       font-size: 1.3rem;
       font-weight: 600;
       margin-bottom: 1.2rem;
-      color: #333;
+      color: #f1f5f9;
       text-align: center;
     }
 
@@ -312,7 +325,7 @@ import { FormsModule } from '@angular/forms';
       display: block;
       margin-bottom: 0.4rem;
       font-weight: 500;
-      color: #555;
+      color: #cbd5e1;
       font-size: 0.9rem;
     }
 
@@ -320,20 +333,21 @@ import { FormsModule } from '@angular/forms';
     .form-textarea {
       width: 100%;
       padding: 0.7rem;
-      border: 1px solid #ddd;
+      border: 1px solid #64748b;
       border-radius: 6px;
       font-size: 0.9rem;
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
       font-family: inherit;
-      background: #fafafa;
+      background: #475569;
+      color: #f1f5f9;
     }
 
     .form-input:focus,
     .form-textarea:focus {
       outline: none;
-      border-color: #1a365d;
-      box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.1);
-      background: white;
+      border-color: #60a5fa;
+      box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+      background: #475569;
     }
 
     .form-textarea {
@@ -361,14 +375,14 @@ import { FormsModule } from '@angular/forms';
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+      background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
       color: white;
       border-color: transparent;
     }
 
     .btn-primary:hover:not(:disabled) {
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(26, 54, 93, 0.4);
+      box-shadow: 0 5px 15px rgba(96, 165, 250, 0.4);
     }
 
     .btn-primary:disabled {
@@ -382,8 +396,12 @@ import { FormsModule } from '@angular/forms';
     }
 
     .map-section {
-      padding: 3rem 0;
-      background: #f8f9fa;
+      padding: 2rem 0;
+      background: #334155;
+    }
+
+    .map-section .section-title {
+      color: #f8fafc;
     }
 
     .map-container {
@@ -399,7 +417,7 @@ import { FormsModule } from '@angular/forms';
 
     .map-img {
       width: 100%;
-      height: 250px;
+      height: 150px;
       object-fit: cover;
       border-radius: 15px;
       transition: transform 0.3s ease;
@@ -410,8 +428,8 @@ import { FormsModule } from '@angular/forms';
     }
 
     .map-placeholder {
-      height: 250px;
-      background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+      height: 150px;
+      background: #475569;
       border-radius: 15px;
       display: flex;
       flex-direction: column;
@@ -419,6 +437,15 @@ import { FormsModule } from '@angular/forms';
       justify-content: center;
       color: white;
       font-size: 1.2rem;
+      border: 1px solid #64748b;
+    }
+
+    .map-placeholder p {
+      color: #f8fafc;
+      font-size: 1rem;
+      margin: 0;
+      text-align: center;
+      font-weight: 500;
     }
 
     .map-placeholder i {
@@ -502,17 +529,17 @@ export class ContactComponent implements OnInit {
     },
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/md-shihab-hossain',
+      url: 'https://www.linkedin.com/in/md-shihab-hossain-908458212/',
       icon: 'fab fa-linkedin'
     },
     {
       name: 'LeetCode',
-      url: 'https://leetcode.com/shehab-bs1553',
+      url: 'https://leetcode.com/u/Shihab_Hossain_038/',
       icon: 'fas fa-code'
     },
     {
       name: 'Codeforces',
-      url: 'https://codeforces.com/profile/shehab-bs1553',
+      url: 'https://codeforces.com/profile/Shihab_Hossain_38',
       icon: 'fas fa-trophy'
     }
   ];

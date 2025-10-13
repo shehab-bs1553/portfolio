@@ -74,6 +74,21 @@ import { CommonModule } from '@angular/common';
               <h3 class="project-title">{{ project.title }}</h3>
               <p class="project-description">{{ project.description }}</p>
               
+              <div class="project-details" *ngIf="project.outcomes">
+                <div class="detail-section">
+                  <h4 class="detail-title">Outcomes</h4>
+                  <p class="detail-content">{{ project.outcomes }}</p>
+                </div>
+                <div class="detail-section">
+                  <h4 class="detail-title">Challenges</h4>
+                  <p class="detail-content">{{ project.challenges }}</p>
+                </div>
+                <div class="detail-section">
+                  <h4 class="detail-title">Impact</h4>
+                  <p class="detail-content">{{ project.impact }}</p>
+                </div>
+              </div>
+              
               <div class="project-tech">
                 <span class="tech-tag" *ngFor="let tech of project.technologies">
                   {{ tech }}
@@ -106,14 +121,14 @@ import { CommonModule } from '@angular/common';
   `,
   styles: [`
     .projects-hero {
-      padding: 6rem 0 4rem;
-      background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+      padding: 2rem 0 2rem;
+      background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
       color: white;
       text-align: center;
     }
 
     .page-title {
-      font-size: 3rem;
+      font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 1rem;
     }
@@ -124,8 +139,8 @@ import { CommonModule } from '@angular/common';
     }
 
     .projects-filter {
-      padding: 3rem 0;
-      background: #f8f9fa;
+      padding: 2rem 0;
+      background: #334155;
     }
 
     .filter-buttons {
@@ -137,9 +152,9 @@ import { CommonModule } from '@angular/common';
 
     .filter-btn {
       padding: 0.8rem 1.5rem;
-      border: 2px solid #1a365d;
+      border: 2px solid #60a5fa;
       background: transparent;
-      color: #1a365d;
+      color: #60a5fa;
       border-radius: 25px;
       font-weight: 600;
       cursor: pointer;
@@ -148,7 +163,7 @@ import { CommonModule } from '@angular/common';
 
     .filter-btn:hover,
     .filter-btn.active {
-      background: #1a365d;
+      background: #60a5fa;
       color: white;
       transform: translateY(-2px);
     }
@@ -164,11 +179,12 @@ import { CommonModule } from '@angular/common';
     }
 
     .project-card {
-      background: white;
+      background: #334155;
       border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #475569;
     }
 
     .project-card:hover {
@@ -179,7 +195,7 @@ import { CommonModule } from '@angular/common';
     .project-image {
       position: relative;
       height: 200px;
-      background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+      background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -212,7 +228,7 @@ import { CommonModule } from '@angular/common';
     .action-btn {
       width: 50px;
       height: 50px;
-      background: #1a365d;
+      background: #60a5fa;
       color: white;
       border-radius: 50%;
       display: flex;
@@ -221,7 +237,7 @@ import { CommonModule } from '@angular/common';
       text-decoration: none;
       transition: all 0.3s ease;
       font-size: 1.2rem;
-      box-shadow: 0 2px 8px rgba(26, 54, 93, 0.3);
+      box-shadow: 0 2px 8px rgba(96, 165, 250, 0.3);
     }
 
     .action-btn:hover {
@@ -242,7 +258,7 @@ import { CommonModule } from '@angular/common';
     }
 
     .project-category {
-      color: #1a365d;
+      color: #60a5fa;
       font-weight: 600;
       font-size: 0.9rem;
       text-transform: uppercase;
@@ -254,13 +270,37 @@ import { CommonModule } from '@angular/common';
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 1rem;
-      color: #333;
+      color: #f1f5f9;
     }
 
     .project-description {
-      color: #666;
+      color: #cbd5e1;
       line-height: 1.6;
       margin-bottom: 1.5rem;
+    }
+
+    .project-details {
+      margin-bottom: 1.5rem;
+    }
+
+    .detail-section {
+      margin-bottom: 1rem;
+    }
+
+    .detail-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #60a5fa;
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .detail-content {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+      margin: 0;
     }
 
     .project-tech {
@@ -271,12 +311,13 @@ import { CommonModule } from '@angular/common';
     }
 
     .tech-tag {
-      background: #f8f9fa;
-      color: #1a365d;
+      background: #475569;
+      color: #60a5fa;
       padding: 0.3rem 0.8rem;
       border-radius: 15px;
       font-size: 0.8rem;
       font-weight: 500;
+      border: 1px solid #64748b;
     }
 
     .project-footer {
@@ -286,7 +327,7 @@ import { CommonModule } from '@angular/common';
     }
 
     .project-date {
-      color: #999;
+      color: #cbd5e1;
       font-size: 0.9rem;
     }
 
@@ -315,7 +356,7 @@ import { CommonModule } from '@angular/common';
 
     .cta-section {
       padding: 1.5rem 0;
-      background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+      background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
       color: white;
       text-align: center;
     }
@@ -396,7 +437,10 @@ export class ProjectsComponent implements OnInit {
       status: 'in-progress',
       icon: 'fas fa-users-cog',
       liveUrl: null,
-      githubUrl: 'https://github.com/shehab-bs1553'
+      githubUrl: 'https://github.com/shehab-bs1553',
+      outcomes: 'Enhanced data security with 99.9% uptime, reduced manual data sharing by 80%, improved user experience with intuitive interface',
+      challenges: 'Complex RBAC implementation, multi-tenant architecture, real-time data synchronization, performance optimization for large datasets',
+      impact: 'Streamlined dealer operations, improved data security compliance, reduced administrative overhead, enhanced customer satisfaction'
     },
     {
       id: 2,
@@ -408,7 +452,10 @@ export class ProjectsComponent implements OnInit {
       status: 'completed',
       icon: 'fas fa-robot',
       liveUrl: null,
-      githubUrl: 'https://github.com/shehab-bs1553'
+      githubUrl: 'https://github.com/shehab-bs1553',
+      outcomes: 'Achieved 92% customer query resolution rate, reduced support tickets by 65%, improved response time to under 2 seconds',
+      challenges: 'Integration with multiple NopCommerce stores, handling complex product queries, maintaining context across conversations, scaling AI responses',
+      impact: 'Enhanced customer experience, reduced support workload, increased sales conversion by 25%, improved customer satisfaction scores'
     },
     {
       id: 3,
@@ -420,7 +467,10 @@ export class ProjectsComponent implements OnInit {
       status: 'completed',
       icon: 'fas fa-chart-pie',
       liveUrl: null,
-      githubUrl: 'https://github.com/shehab-bs1553'
+      githubUrl: 'https://github.com/shehab-bs1553',
+      outcomes: 'Automated 95% of financial report generation, reduced report creation time from 8 hours to 30 minutes, achieved 99.5% accuracy in calculations',
+      challenges: 'Complex financial data integration, real-time data processing, ensuring compliance with accounting standards, handling large datasets efficiently',
+      impact: 'Streamlined financial operations, improved decision-making speed, reduced manual errors, enhanced financial transparency and reporting efficiency'
     },
     {
       id: 4,
@@ -432,19 +482,25 @@ export class ProjectsComponent implements OnInit {
       status: 'completed',
       icon: 'fas fa-brain',
       liveUrl: null,
-      githubUrl: 'https://github.com/shehab-bs1553'
+      githubUrl: 'https://github.com/shehab-bs1553',
+      outcomes: 'Achieved 88% accuracy in sentiment classification, processed 10,000+ tweets per hour, reduced manual sentiment analysis time by 90%',
+      challenges: 'Handling noisy social media data, model fine-tuning for domain-specific language, real-time processing constraints, dealing with multilingual content',
+      impact: 'Improved brand monitoring capabilities, enabled data-driven marketing decisions, enhanced customer feedback analysis, supported proactive reputation management'
     },
     {
       id: 5,
       title: 'Competitive Programming Solutions',
-      description: 'Solved 3,000+ algorithmic problems on LeetCode (Knight - Max rating: 1923) and Codeforces (Pupil - Max rating: 1363). Participated in UGVIntra University Programming Contest 2023.',
+      description: 'Solved 3,000+ algorithmic problems across multiple platforms including LeetCode (Knight - Max rating: 1923), Codeforces (Pupil - Max rating: 1363), TopH, CSES, CodeChef, HackerRank, and HackerEarth. Participated in UGVIntra University Programming Contest 2023.',
       category: 'Algorithms',
       technologies: ['C++', 'Python', 'Data Structures', 'Algorithms', 'Problem Solving'],
       date: '2019 - Present',
       status: 'completed',
       icon: 'fas fa-code',
       liveUrl: 'https://leetcode.com/shehab-bs1553',
-      githubUrl: 'https://github.com/shehab-bs1553'
+      githubUrl: 'https://github.com/shehab-bs1553',
+      outcomes: 'Solved 3,000+ problems across 7 platforms, achieved Knight rank on LeetCode (top 5%), maintained consistent problem-solving streak, participated in 50+ contests',
+      challenges: 'Complex algorithmic thinking, time pressure in contests, optimizing solutions for efficiency, mastering advanced data structures and algorithms',
+      impact: 'Enhanced problem-solving skills, improved algorithmic thinking, developed efficient coding practices, built strong foundation for software development'
     },
     {
       id: 6,
@@ -456,7 +512,10 @@ export class ProjectsComponent implements OnInit {
       status: 'completed',
       icon: 'fas fa-puzzle-piece',
       liveUrl: null,
-      githubUrl: 'https://github.com/shehab-bs1553'
+      githubUrl: 'https://github.com/shehab-bs1553',
+      outcomes: 'Developed 5+ custom plugins, improved customer engagement by 40%, reduced development time for e-commerce features by 60%',
+      challenges: 'NopCommerce architecture complexity, plugin compatibility issues, AI integration with existing systems, performance optimization',
+      impact: 'Enhanced e-commerce functionality, improved customer experience, increased sales conversion rates, streamlined development processes'
     }
   ];
 

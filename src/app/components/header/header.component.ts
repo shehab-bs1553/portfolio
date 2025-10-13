@@ -11,6 +11,9 @@ import { CommonModule } from '@angular/common';
         <div class="container">
           <div class="nav-brand">
             <a href="#home" class="brand-link">
+              <div class="brand-logo">
+                <img src="assets/image/1.jpg" alt="Logo" class="logo-img">
+              </div>
               <span class="brand-text">MD Shehab Hossain</span>
             </a>
           </div>
@@ -57,18 +60,18 @@ import { CommonModule } from '@angular/common';
       top: 0;
       left: 0;
       width: 100%;
-      background: rgba(246, 252, 238, 0.95);
+      background: rgba(30, 41, 59, 0.95);
       backdrop-filter: blur(15px);
       z-index: 1000;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
     }
 
     .header.scrolled {
-      background: rgba(238, 248, 252, 0.95);
-      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.15);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      background: rgba(15, 23, 42, 0.95);
+      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.4);
+      border-bottom: 1px solid rgba(59, 130, 246, 0.3);
     }
 
     .navbar {
@@ -83,20 +86,43 @@ import { CommonModule } from '@angular/common';
 
     .brand-link {
       text-decoration: none;
-      color: #1a365d;
+      color: #60a5fa;
       font-weight: 700;
       font-size: 1.6rem;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
     }
 
     .brand-link:hover {
-      color: #2d3748;
+      color: #93c5fd;
       transform: translateY(-2px);
     }
 
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid #60a5fa;
+      transition: all 0.3s ease;
+    }
+
+    .brand-logo:hover {
+      border-color: #93c5fd;
+      transform: scale(1.05);
+    }
+
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .brand-text {
-      color: #1a365d;
+      color: #60a5fa;
     }
 
     .nav-menu {
@@ -114,7 +140,7 @@ import { CommonModule } from '@angular/common';
 
     .nav-link {
       text-decoration: none;
-      color: #333;
+      color: #cbd5e1;
       font-weight: 500;
       font-size: 1rem;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -124,14 +150,14 @@ import { CommonModule } from '@angular/common';
     }
 
     .nav-link:hover {
-      color: #1a365d;
-      background: rgba(26, 54, 93, 0.1);
+      color: #60a5fa;
+      background: rgba(59, 130, 246, 0.1);
       transform: translateY(-2px);
     }
 
     .nav-link.active {
-      color: #1a365d;
-      background: rgba(26, 54, 93, 0.15);
+      color: #60a5fa;
+      background: rgba(59, 130, 246, 0.15);
     }
 
     .nav-link::after {
@@ -141,7 +167,7 @@ import { CommonModule } from '@angular/common';
       left: 50%;
       width: 0;
       height: 2px;
-      background: #1a365d;
+      background: #60a5fa;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       transform: translateX(-50%);
       border-radius: 1px;
@@ -162,7 +188,7 @@ import { CommonModule } from '@angular/common';
     .hamburger {
       width: 28px;
       height: 3px;
-      background: #333;
+      background: #cbd5e1;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       border-radius: 2px;
@@ -174,7 +200,7 @@ import { CommonModule } from '@angular/common';
       position: absolute;
       width: 28px;
       height: 3px;
-      background: #333;
+      background: #cbd5e1;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       border-radius: 2px;
     }
@@ -195,29 +221,38 @@ import { CommonModule } from '@angular/common';
     .hamburger.active::before {
       transform: rotate(45deg);
       top: 0;
-      background: #1a365d;
+      background: #60a5fa;
     }
 
     .hamburger.active::after {
       transform: rotate(-45deg);
       top: 0;
-      background: #1a365d;
+      background: #60a5fa;
     }
 
     @media (max-width: 768px) {
+      .brand-logo {
+        width: 35px;
+        height: 35px;
+      }
+
+      .brand-text {
+        font-size: 1.4rem;
+      }
+
       .nav-menu {
         position: fixed;
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.98);
+        background: rgba(15, 23, 42, 0.98);
         backdrop-filter: blur(15px);
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        border-top: 1px solid rgba(59, 130, 246, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
       }
 
       .nav-menu.active {
@@ -240,21 +275,21 @@ import { CommonModule } from '@angular/common';
       .nav-link {
         display: block;
         padding: 1.2rem 2rem;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        color: #333;
+        border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+        color: #cbd5e1;
         text-align: center;
         font-size: 1.1rem;
       }
 
       .nav-link:hover {
-        background: rgba(26, 54, 93, 0.1);
-        color: #1a365d;
+        background: rgba(59, 130, 246, 0.1);
+        color: #60a5fa;
         transform: none;
       }
 
       .nav-link.active {
-        background: rgba(26, 54, 93, 0.15);
-        color: #1a365d;
+        background: rgba(59, 130, 246, 0.15);
+        color: #60a5fa;
       }
 
       .nav-toggle {

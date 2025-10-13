@@ -63,7 +63,7 @@ import { CommonModule } from '@angular/common';
   `,
   styles: [`
     .footer {
-      background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+      background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
       color: white;
       padding: 2.5rem 0 1rem;
       margin-top: auto;
