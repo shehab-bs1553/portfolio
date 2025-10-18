@@ -50,13 +50,13 @@
   background: linear-gradient(135deg, rgba(51, 65, 85, 0.95), rgba(71, 85, 105, 0.8));
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  border-radius: 24px;
-  padding: 2.5rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 6px 12px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
 }
 
 .profile-card::before {
@@ -77,27 +77,27 @@
 }
 
 .profile-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 12px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .profile-header {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
   text-align: left;
 }
 
 .profile-avatar {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 4px solid #60a5fa;
-  box-shadow: 0 8px 20px rgba(96, 165, 250, 0.3);
+  transition: all 0.3s ease;
+  border: 3px solid #60a5fa;
+  box-shadow: 0 6px 15px rgba(96, 165, 250, 0.3);
 }
 
 .profile-img {
@@ -169,17 +169,17 @@
 .profile-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .stat {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 0.8rem;
+  padding: 0.8rem;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
+  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
@@ -191,15 +191,15 @@
 }
 
 .stat-icon {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   background: linear-gradient(135deg, #60a5fa, #3b82f6);
-  border-radius: 12px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .stat-content {
@@ -272,7 +272,7 @@
 
 .achievement-tags {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
@@ -282,9 +282,9 @@
   flex-direction: column;
   align-items: center;
   gap: 0.3rem;
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.2rem;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
+  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   flex: 1;
@@ -297,20 +297,6 @@
   cursor: pointer;
 }
 
-.achievement-tag::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transition: left 0.6s ease;
-}
-
-.achievement-tag:hover::before {
-  left: 100%;
-}
 
 .achievement-tag i {
   font-size: 1.5rem;
@@ -334,10 +320,9 @@
 }
 
 .achievement-tag.leetcode:hover {
-  background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(255, 165, 0, 0.1));
+  background: rgba(255, 140, 0, 0.1);
   border-color: rgba(255, 140, 0, 0.5);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.2);
+  transform: translateY(-2px);
   text-decoration: none;
   color: inherit;
 }
@@ -351,10 +336,9 @@
 }
 
 .achievement-tag.codeforces:hover {
-  background: linear-gradient(135deg, rgba(255, 69, 0, 0.1), rgba(255, 99, 71, 0.1));
+  background: rgba(255, 69, 0, 0.1);
   border-color: rgba(255, 69, 0, 0.5);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255, 69, 0, 0.2);
+  transform: translateY(-2px);
   text-decoration: none;
   color: inherit;
 }
@@ -368,10 +352,9 @@
 }
 
 .achievement-tag.ugv:hover {
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 193, 7, 0.1));
+  background: rgba(255, 215, 0, 0.1);
   border-color: rgba(255, 215, 0, 0.5);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.2);
+  transform: translateY(-2px);
 }
 
 .achievement-tag.ugv i {
@@ -546,28 +529,15 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeInLeft {
-  from { opacity: 0; transform: translateX(-30px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes fadeInRight {
-  from { opacity: 0; transform: translateX(30px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
 @keyframes slideInFromTop {
   from { opacity: 0; transform: translateY(-50px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 .about-hero { animation: fadeInUp 1s ease-out; }
-.page-title { animation: slideInFromTop 1.2s ease-out 0.2s both; }
+.page-title { animation: fadeInUp 1.2s ease-out 0.2s both; }
 .page-subtitle { animation: fadeInUp 1.4s ease-out 0.4s both; }
 .section-title { animation: fadeInUp 1.6s ease-out 0.6s both; }
-.about-description { animation: fadeInLeft 1.8s ease-out 0.8s both; }
-.about-description:nth-child(2) { animation-delay: 1s; }
-.about-description:nth-child(3) { animation-delay: 1.2s; }
-.about-description:nth-child(4) { animation-delay: 1.4s; }
-.profile-card { animation: fadeInRight 2s ease-out 1s both; }
+.about-description { animation: fadeInUp 1.8s ease-out 0.8s both; }
+.profile-card { animation: fadeInUp 2s ease-out 1s both; }
 
