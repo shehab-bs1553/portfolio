@@ -14,9 +14,14 @@ export class HomeComponent implements OnInit {
 
   skills = [
     {
-      name: '.NET Core',
+      name: '.NET',
       icon: 'fab fa-microsoft',
-      description: 'Building scalable backend systems and APIs with .NET Core'
+      description: 'Building scalable backend systems and APIs with .NET Framework'
+    },
+    {
+      name: 'Angular',
+      icon: 'fab fa-angular',
+      description: 'Developing modern web applications with Angular framework'
     },
     {
       name: 'AI & ML',

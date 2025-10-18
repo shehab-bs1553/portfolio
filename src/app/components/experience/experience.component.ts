@@ -13,14 +13,14 @@ export class ExperienceComponent implements OnInit {
     {
       title: 'Software Engineer I',
       date: 'Aug 2024 - Present',
-      description: 'Develop intelligent and scalable backend systems using .NET Core and FastAPI. Build and integrate AI-powered solutions including Semantic Kernel, LangGraph, and Agentic AI workflows.',
-      tags: ['.NET Core', 'FastAPI', 'Semantic Kernel', 'LangGraph', 'AI']
+      description: 'Develop intelligent and scalable backend systems using .NET and FastAPI. Build and integrate AI-powered solutions including Semantic Kernel, LangGraph, and Agentic AI workflows.',
+      tags: ['.NET', 'FastAPI', 'Semantic Kernel', 'LangGraph', 'AI']
     },
     {
       title: 'Software Engineer Trainee',
       date: 'Apr 2024 - Jul 2024',
-      description: 'Assisted in developing backend modules using .NET Core and Entity Framework. Supported NopCommerce plugin development for AI-integrated features.',
-      tags: ['.NET Core', 'Entity Framework', 'NopCommerce', 'API Development']
+      description: 'Assisted in developing backend modules using .NET and Entity Framework. Supported NopCommerce plugin development for AI-integrated features.',
+      tags: ['.NET', 'Entity Framework', 'NopCommerce', 'API Development']
     }
   ];
 
