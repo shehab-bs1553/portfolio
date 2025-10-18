@@ -1,6 +1,6 @@
 .about-hero {
   padding: 2.5rem 0 2rem;
-  background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+  background: linear-gradient(135deg, #1e293b, #334155, #475569);
   color: white;
   text-align: center;
 }
@@ -47,15 +47,12 @@
 }
 
 .profile-card {
-  background: linear-gradient(135deg, rgba(51, 65, 85, 0.95) 0%, rgba(71, 85, 105, 0.8) 100%);
+  background: linear-gradient(135deg, rgba(51, 65, 85, 0.95), rgba(71, 85, 105, 0.8));
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border-radius: 24px;
   padding: 2.5rem;
-  box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.3),
-    0 8px 16px rgba(0, 0, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
@@ -69,7 +66,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(96, 165, 250, 0.05) 0%, transparent 50%, rgba(255, 193, 7, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.05), transparent 50%, rgba(255, 193, 7, 0.05));
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
@@ -81,10 +78,7 @@
 
 .profile-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 
-    0 30px 60px rgba(0, 0, 0, 0.4),
-    0 12px 24px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 12px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .profile-header {
@@ -199,7 +193,7 @@
 .stat-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -248,7 +242,7 @@
 
 .skill-tag {
   padding: 0.4rem 0.8rem;
-  background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.1), rgba(59, 130, 246, 0.1));
   color: #60a5fa;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -258,7 +252,7 @@
 }
 
 .skill-tag:hover {
-  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
@@ -340,7 +334,7 @@
 }
 
 .achievement-tag.leetcode:hover {
-  background: linear-gradient(135deg, rgba(255, 140, 0, 0.1) 0%, rgba(255, 165, 0, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(255, 165, 0, 0.1));
   border-color: rgba(255, 140, 0, 0.5);
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(255, 140, 0, 0.2);
@@ -357,7 +351,7 @@
 }
 
 .achievement-tag.codeforces:hover {
-  background: linear-gradient(135deg, rgba(255, 69, 0, 0.1) 0%, rgba(255, 99, 71, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(255, 69, 0, 0.1), rgba(255, 99, 71, 0.1));
   border-color: rgba(255, 69, 0, 0.5);
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(255, 69, 0, 0.2);
@@ -374,7 +368,7 @@
 }
 
 .achievement-tag.ugv:hover {
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 193, 7, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 193, 7, 0.1));
   border-color: rgba(255, 215, 0, 0.5);
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(255, 215, 0, 0.2);
@@ -394,7 +388,7 @@
   align-items: center;
   gap: 0.8rem;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
   color: white;
   border: none;
   border-radius: 50px;
@@ -423,7 +417,7 @@
 }
 
 .contact-btn:hover {
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 8px 25px rgba(96, 165, 250, 0.4);
 }
@@ -437,7 +431,7 @@
   align-items: center;
   gap: 0.8rem;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #10b981, #059669);
   color: white;
   border: none;
   border-radius: 50px;
@@ -468,7 +462,7 @@
 }
 
 .resume-btn:hover {
-  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  background: linear-gradient(135deg, #059669, #047857);
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
   text-decoration: none;
@@ -548,82 +542,32 @@
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes slideInFromTop {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.about-hero {
-  animation: fadeInUp 1s ease-out;
-}
-
-.page-title {
-  animation: slideInFromTop 1.2s ease-out 0.2s both;
-}
-
-.page-subtitle {
-  animation: fadeInUp 1.4s ease-out 0.4s both;
-}
-
-.section-title {
-  animation: fadeInUp 1.6s ease-out 0.6s both;
-}
-
-.about-description {
-  animation: fadeInLeft 1.8s ease-out 0.8s both;
-}
-
-.about-description:nth-child(2) {
-  animation-delay: 1s;
-}
-
-.about-description:nth-child(3) {
-  animation-delay: 1.2s;
-}
-
-.about-description:nth-child(4) {
-  animation-delay: 1.4s;
-}
-
-.profile-card {
-  animation: fadeInRight 2s ease-out 1s both;
-}
+.about-hero { animation: fadeInUp 1s ease-out; }
+.page-title { animation: slideInFromTop 1.2s ease-out 0.2s both; }
+.page-subtitle { animation: fadeInUp 1.4s ease-out 0.4s both; }
+.section-title { animation: fadeInUp 1.6s ease-out 0.6s both; }
+.about-description { animation: fadeInLeft 1.8s ease-out 0.8s both; }
+.about-description:nth-child(2) { animation-delay: 1s; }
+.about-description:nth-child(3) { animation-delay: 1.2s; }
+.about-description:nth-child(4) { animation-delay: 1.4s; }
+.profile-card { animation: fadeInRight 2s ease-out 1s both; }
 
