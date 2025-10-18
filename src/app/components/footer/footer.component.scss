@@ -313,11 +313,25 @@
 
   .footer-description {
     font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .link-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-link {
+    font-size: 0.9rem;
   }
 
   .social-link {
     width: 40px;
     height: 40px;
     font-size: 1rem;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
   }
 }
