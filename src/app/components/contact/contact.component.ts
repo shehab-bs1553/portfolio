@@ -56,6 +56,11 @@ export class ContactComponent implements OnInit {
       icon: 'fab fa-linkedin'
     },
     {
+      name: 'Resume',
+      url: 'https://drive.google.com/file/d/16RWOGirGxLZgzY6fPvk8VRg_MqOmrfC_/view',
+      icon: 'fas fa-file-pdf'
+    },
+    {
       name: 'LeetCode',
       url: 'https://leetcode.com/u/Shihab_Hossain_038/',
       icon: 'fas fa-code'
@@ -63,7 +68,7 @@ export class ContactComponent implements OnInit {
     {
       name: 'Codeforces',
       url: 'https://codeforces.com/profile/Shihab_Hossain_38',
-      icon: 'fas fa-trophy'
+      icon: 'fas fa-code'
     }
   ];
 

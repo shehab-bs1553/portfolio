@@ -26,23 +26,21 @@ export class SkillsComponent implements OnInit {
     {
       name: 'Frameworks & Libraries',
       skills: [
-        { name: '.NET', level: 85 },
-        { name: 'Angular', level: 70 },
+        { name: '.NET MVC', level: 85 },
+        { name: 'Angular', level: 65 },
         { name: 'FastAPI', level: 85 },
-        { name: 'Entity Framework', level: 85 },
-        { name: 'ASP.NET Core', level: 80 },
-        { name: 'React', level: 75 }
+        { name: 'Entity Framework', level: 80 },
+        { name: 'ASP.NET Core', level: 80 }
       ]
     },
     {
       name: 'AI & Machine Learning',
       skills: [
-        { name: 'Semantic Kernel', level: 85 },
-        { name: 'LangGraph', level: 85 },
-        { name: 'LangChain', level: 80 },
+        { name: 'Semantic Kernel', level: 80 },
+        { name: 'LangGraph', level: 80 },
+        { name: 'LangChain', level: 85 },
         { name: 'OpenAI API', level: 80 },
-        { name: 'Pandas', level: 75 },
-        { name: 'NumPy', level: 70 }
+        { name: 'Pandas', level: 75 }
       ]
     },
     {
