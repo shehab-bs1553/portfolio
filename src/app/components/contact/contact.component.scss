@@ -300,35 +300,220 @@
 }
 
 @media (max-width: 768px) {
+  .contact-hero {
+    padding: 1.5rem 0;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+  }
+
+  .contact-details {
+    padding: 1.5rem 0;
+    margin: 1.5rem 0;
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  .page-title {
-    font-size: 2.5rem;
+  .contact-info {
+    padding: 1.5rem;
+    border-radius: 12px;
   }
 
-  .contact-form-container {
-    padding: 2rem;
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   .contact-method {
-    padding: 1rem;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
   }
 
   .method-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
-    margin-right: 1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    margin-right: 0.8rem;
+  }
+
+  .method-title {
+    font-size: 0.9rem;
+  }
+
+  .method-value {
+    font-size: 0.8rem;
+  }
+
+  .social-title {
+    font-size: 1.1rem;
+  }
+
+  .social-link {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+
+  .contact-form-container {
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+
+  .form-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.6rem;
+  }
+
+  .form-label {
+    font-size: 0.85rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .form-textarea {
+    min-height: 70px;
+  }
+
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .map-section {
+    padding: 1.5rem 0;
   }
 
   .map-img {
-    height: 200px;
+    height: 180px;
   }
 
   .map-placeholder {
-    height: 200px;
+    height: 180px;
+  }
+
+  .map-placeholder i {
+    font-size: 2.5rem;
+  }
+
+  .map-placeholder p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero {
+    padding: 1rem 0;
+  }
+
+  .page-title {
+    font-size: 1.6rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .contact-details {
+    padding: 1rem 0;
+    margin: 1rem 0;
+  }
+
+  .contact-info {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-description {
+    font-size: 0.85rem;
+  }
+
+  .contact-method {
+    padding: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .method-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+    margin-right: 0.6rem;
+  }
+
+  .method-title {
+    font-size: 0.85rem;
+  }
+
+  .method-value {
+    font-size: 0.75rem;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .contact-form-container {
+    padding: 1rem;
+  }
+
+  .form-title {
+    font-size: 1rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .form-textarea {
+    min-height: 60px;
+  }
+
+  .btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .map-img {
+    height: 150px;
+  }
+
+  .map-placeholder {
+    height: 150px;
+  }
+
+  .map-placeholder i {
+    font-size: 2rem;
+  }
+
+  .map-placeholder p {
+    font-size: 0.8rem;
   }
 }
