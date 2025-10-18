@@ -1,0 +1,112 @@
+<section id="projects" class="projects-hero">
+  <div class="container">
+    <div class="projects-content">
+      <h1 class="page-title">My Projects</h1>
+      <p class="page-subtitle">Explore my portfolio of web applications and solutions</p>
+    </div>
+  </div>
+</section>
+
+<section class="projects-filter">
+  <div class="container">
+    <div class="filter-buttons">
+      <button 
+        class="filter-btn" 
+        [class.active]="activeFilter === 'all'"
+        (click)="setFilter('all')">
+        All Projects
+      </button>
+      <button 
+        class="filter-btn" 
+        [class.active]="activeFilter === 'ai/ml'"
+        (click)="setFilter('ai/ml')">
+        AI/ML
+      </button>
+      <button 
+        class="filter-btn" 
+        [class.active]="activeFilter === 'full stack'"
+        (click)="setFilter('full stack')">
+        Full Stack
+      </button>
+      <button 
+        class="filter-btn" 
+        [class.active]="activeFilter === 'algorithms'"
+        (click)="setFilter('algorithms')">
+        Algorithms
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="projects-grid">
+  <div class="container">
+    <div class="projects-container">
+      <div 
+        class="project-card" 
+        *ngFor="let project of filteredProjects"
+        [@fadeInUp]>
+        <div class="project-image">
+          <div class="project-overlay">
+            <div class="project-actions">
+              <a [href]="project.liveUrl" target="_blank" class="action-btn" *ngIf="project.liveUrl">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a [href]="project.githubUrl" target="_blank" class="action-btn">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-placeholder">
+            <i [class]="project.icon"></i>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <div class="project-category">{{ project.category }}</div>
+          <h3 class="project-title">{{ project.title }}</h3>
+          <p class="project-description">{{ project.description }}</p>
+          
+          <div class="project-details" *ngIf="project.outcomes">
+            <div class="detail-section">
+              <h4 class="detail-title">Outcomes</h4>
+              <p class="detail-content">{{ project.outcomes }}</p>
+            </div>
+            <div class="detail-section">
+              <h4 class="detail-title">Challenges</h4>
+              <p class="detail-content">{{ project.challenges }}</p>
+            </div>
+            <div class="detail-section">
+              <h4 class="detail-title">Impact</h4>
+              <p class="detail-content">{{ project.impact }}</p>
+            </div>
+          </div>
+          
+          <div class="project-tech">
+            <span class="tech-tag" *ngFor="let tech of project.technologies">
+              {{ tech }}
+            </span>
+          </div>
+          
+          <div class="project-footer">
+            <div class="project-date">{{ project.date }}</div>
+            <div class="project-status" [class]="project.status">
+              {{ project.status }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">Interested in My Work?</h2>
+      <p class="cta-description">
+        I'm always open to discussing new projects and opportunities.
+      </p>
+      <a href="#contact" class="btn btn-primary btn-large">Let's Discuss</a>
+    </div>
+  </div>
+</section>

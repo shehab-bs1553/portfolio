@@ -1,0 +1,145 @@
+<section id="contact" class="contact-hero">
+  <div class="container">
+    <div class="contact-content">
+      <h1 class="page-title">Get In Touch</h1>
+      <p class="page-subtitle">Let's discuss your next project or just say hello</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact-details">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="contact-description">
+          I'm always interested in new opportunities and exciting projects. 
+          Whether you have a question or just want to say hi, I'll try my best to get back to you!
+        </p>
+        
+        <div class="contact-methods">
+          <div class="contact-method" *ngFor="let method of contactMethods">
+            <div class="method-icon">
+              <i [class]="method.icon"></i>
+            </div>
+            <div class="method-content">
+              <h3 class="method-title">{{ method.title }}</h3>
+              <p class="method-value">{{ method.value }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <h3 class="social-title">Follow Me</h3>
+          <div class="social-icons">
+            <a 
+              *ngFor="let social of socialLinks"
+              [href]="social.url" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="social-link">
+              <i [class]="social.icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+          <h3 class="form-title">Send Message</h3>
+          
+          <div class="form-group">
+            <label for="name" class="form-label">Name *</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              class="form-input" 
+              [(ngModel)]="formData.name"
+              required
+              #name="ngModel">
+            <div class="error-message" *ngIf="name.invalid && name.touched">
+              Name is required
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email *</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              class="form-input" 
+              [(ngModel)]="formData.email"
+              required
+              email
+              #email="ngModel">
+            <div class="error-message" *ngIf="email.invalid && email.touched">
+              <span *ngIf="email.errors?.['required']">Email is required</span>
+              <span *ngIf="email.errors?.['email']">Please enter a valid email</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject" class="form-label">Subject *</label>
+            <input 
+              type="text" 
+              id="subject" 
+              name="subject" 
+              class="form-input" 
+              [(ngModel)]="formData.subject"
+              required
+              #subject="ngModel">
+            <div class="error-message" *ngIf="subject.invalid && subject.touched">
+              Subject is required
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Message *</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              class="form-textarea" 
+              rows="5"
+              [(ngModel)]="formData.message"
+              required
+              #message="ngModel"></textarea>
+            <div class="error-message" *ngIf="message.invalid && message.touched">
+              Message is required
+            </div>
+          </div>
+
+          <button 
+            type="submit" 
+            class="btn btn-primary btn-large"
+            [disabled]="contactForm.invalid || isSubmitting">
+            <span *ngIf="!isSubmitting">Send Message</span>
+            <span *ngIf="isSubmitting">
+              <i class="fas fa-spinner fa-spin"></i> Sending...
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="map-section">
+  <div class="container">
+    <h2 class="section-title text-center">Find Me Here</h2>
+    <div class="map-container">
+      <div class="map-image">
+        <img 
+          src="https://maps.googleapis.com/maps/api/staticmap?center=Section-7+Road-1+House+33+Pallabi+Mirpur+Dhaka+1216,Bangladesh&zoom=15&size=500x300&maptype=roadmap&markers=color:red%7Clabel:A%7CSection-7+Road-1+House+33+Pallabi+Mirpur+Dhaka+1216,Bangladesh&key=YOUR_API_KEY" 
+          alt="Location Map - Section-7, Road-1, House 33, Pallabi, Mirpur, Dhaka 1216"
+          class="map-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="map-placeholder hidden">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Section-7, Road-1, House 33, Pallabi, Mirpur, Dhaka 1216</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

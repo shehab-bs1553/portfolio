@@ -1,0 +1,28 @@
+<section id="experience" class="experience-hero">
+  <div class="container">
+    <div class="experience-content">
+      <h1 class="page-title">Experience & Education</h1>
+      <p class="page-subtitle">My professional journey and academic background</p>
+    </div>
+  </div>
+</section>
+
+<section class="experience-details">
+  <div class="container">
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let item of timeline">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3 class="timeline-title">{{ item.title }}</h3>
+            <span class="timeline-date">{{ item.date }}</span>
+          </div>
+          <p class="timeline-description">{{ item.description }}</p>
+          <div class="timeline-tags">
+            <span class="tag" *ngFor="let tag of item.tags">{{ tag }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
