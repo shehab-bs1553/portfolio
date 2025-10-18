@@ -11,46 +11,121 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-text scroll-animate-left">
-        <!-- <h2 class="section-title">My Story</h2> -->
+        <h2 class="section-title">My Professional Journey</h2>
         <p class="about-description">
-          I'm a Software Engineer I at Brain Station-23 PLC, specializing in scalable .NET API 
-          development, NopCommerce plugin development, and AI-driven solutions. With a strong 
-          foundation in computer science and a passion for emerging technologies.
+          I'm a passionate Software Engineer I at Brain Station-23 PLC, where I specialize in architecting 
+          scalable .NET API solutions and developing cutting-edge AI-powered applications. With a strong 
+          foundation in computer science and an insatiable curiosity for emerging technologies, I've dedicated 
+          my career to pushing the boundaries of what's possible in software development.
         </p>
         <p class="about-description">
-          I excel in building intelligent systems using Semantic Kernel, LangGraph, and Agentic AI 
-          workflows. My expertise spans from developing chatbots and image similarity systems to 
-          creating containerized deployments with Docker and MCP server management.
+          My expertise lies in building intelligent systems that bridge the gap between traditional software 
+          development and artificial intelligence. I excel in implementing Semantic Kernel frameworks, designing 
+          LangGraph workflows, and creating sophisticated Agentic AI solutions that can reason, learn, and adapt. 
+          From developing intelligent chatbots that understand context to building image similarity systems that 
+          can identify patterns across vast datasets, I thrive on solving complex problems with elegant solutions.
         </p>
         <p class="about-description">
-          As a competitive programmer, I've solved 3,000+ algorithmic problems across multiple platforms including 
-          LeetCode (Knight - Max rating: 1923), Codeforces (Pupil - Max rating: 1363), TopH, CSES, CodeChef, 
-          HackerRank, and HackerEarth. This extensive problem-solving experience has strengthened my algorithmic 
-          thinking and coding efficiency.
+          As a competitive programmer, I've solved over 3,000 algorithmic challenges across multiple platforms, 
+          achieving Knight status on LeetCode (Max rating: 1923) and Pupil status on Codeforces (Max rating: 1363). 
+          This extensive problem-solving experience has honed my algorithmic thinking and coding efficiency, 
+          enabling me to approach complex software challenges with confidence and creativity.
+        </p>
+        <p class="about-description">
+          Beyond coding, I'm passionate about containerization with Docker, API integration, and workflow 
+          automation using tools like N8N and MCP servers. I believe in the power of continuous learning and 
+          staying at the forefront of technological innovation to deliver solutions that make a real impact.
         </p>
       </div>
       
       <div class="about-image scroll-animate-right">
         <div class="image-container">
           <div class="profile-card">
-            <div class="profile-avatar">
-              <img src="assets/image/1.jpg" alt="MD Shehab Hossain" class="profile-img">
+            <div class="profile-header">
+              <div class="profile-avatar">
+                <img src="assets/image/1.jpg" alt="MD Shehab Hossain" class="profile-img">
+                <div class="status-indicator"></div>
+              </div>
+              <div class="profile-info">
+                <h3 class="profile-name">MD Shehab Hossain</h3>
+                <p class="profile-title">Software Engineer I</p>
+                <p class="profile-company">Brain Station-23 PLC</p>
+                <div class="profile-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Dhaka, Bangladesh</span>
+                </div>
+              </div>
             </div>
-            <h3 class="profile-name">MD Shehab Hossain</h3>
-            <p class="profile-title">Software Engineer I</p>
+            
             <div class="profile-stats">
               <div class="stat">
-                <span class="stat-number">3000+</span>
-                <span class="stat-label">Problems Solved</span>
+                <div class="stat-icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <div class="stat-content">
+                  <span class="stat-number">3000+</span>
+                  <span class="stat-label">Problems Solved</span>
+                </div>
               </div>
               <div class="stat">
-                <span class="stat-number">2+</span>
-                <span class="stat-label">Years Experience</span>
+                <div class="stat-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="stat-content">
+                  <span class="stat-number">2+</span>
+                  <span class="stat-label">Years Experience</span>
+                </div>
               </div>
               <div class="stat">
-                <span class="stat-number">3.41</span>
-                <span class="stat-label">CGPA</span>
+                <div class="stat-icon">
+                  <i class="fas fa-trophy"></i>
+                </div>
+                <div class="stat-content">
+                  <span class="stat-number">1923</span>
+                  <span class="stat-label">LeetCode Rating</span>
+                </div>
               </div>
+            </div>
+
+            <div class="profile-skills">
+              <h4 class="skills-title">Core Expertise</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">.NET</span>
+                <span class="skill-tag">AI/ML</span>
+                <span class="skill-tag">Angular</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">PostgreSQL</span>
+              </div>
+            </div>
+
+            <div class="profile-achievements">
+              <h4 class="achievements-title">Competitive Programming</h4>
+              <div class="achievement-tags">
+                <span class="achievement-tag leetcode">
+                  <i class="fas fa-trophy"></i>
+                  <span>LeetCode Knight</span>
+                  <small>1923 Rating</small>
+                </span>
+                <span class="achievement-tag codeforces">
+                  <i class="fas fa-code"></i>
+                  <span>Codeforces Pupil</span>
+                  <small>1363 Rating</small>
+                </span>
+                <span class="achievement-tag ugv">
+                  <i class="fas fa-medal"></i>
+                  <span>UGV Onsite Contest</span>
+                  <small>16th Place</small>
+                </span>
+              </div>
+            </div>
+            
+
+            <div class="profile-cta">
+              <button class="contact-btn" (click)="onContactClick()">
+                <i class="fas fa-envelope"></i>
+                <span>Get In Touch</span>
+              </button>
             </div>
           </div>
         </div>

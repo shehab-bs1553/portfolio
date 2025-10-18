@@ -112,34 +112,68 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: 2px solid transparent;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
 }
 
 .btn-primary {
-  background: #ffc107;
+  background: linear-gradient(135deg, #ffc107 0%, #ff8c00 100%);
   color: #333;
   border-color: #ffc107;
+  box-shadow: 
+    0 4px 15px rgba(255, 193, 7, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .btn-primary:hover {
-  background: transparent;
+  background: linear-gradient(135deg, transparent 0%, transparent 100%);
   color: #ffc107;
   border-color: #ffc107;
-  transform: translateY(-2px);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 
+    0 8px 25px rgba(255, 193, 7, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .btn-outline {
-  background: transparent;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
   color: white;
-  border-color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .btn-outline:hover {
-  background: white;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 100%);
   color: #333;
-  transform: translateY(-2px);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 
+    0 8px 25px rgba(255, 255, 255, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .btn-large {
@@ -281,35 +315,93 @@
 .skill-item {
   text-align: center;
   padding: 2rem;
-  background: #1e293b;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-  border: 1px solid #475569;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(51, 65, 85, 0.7) 100%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.05) 0%, transparent 50%, rgba(96, 165, 250, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.skill-item:hover::before {
+  opacity: 1;
 }
 
 .skill-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.2),
+    0 8px 16px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(96, 165, 250, 0.3);
 }
 
 .skill-icon {
   width: 80px;
   height: 80px;
   margin: 0 auto 1rem;
-  background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(51, 65, 85, 0.6) 100%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
   color: white;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.skill-item:hover .skill-icon::before {
+  transform: translateX(100%);
 }
 
 .skill-item:hover .skill-icon {
   background: linear-gradient(135deg, #ffc107 0%, #ff8c00 100%);
-  transform: scale(1.1);
+  transform: scale(1.15) rotate(5deg);
   color: #333;
+  border-color: rgba(255, 193, 7, 0.5);
+  box-shadow: 
+    0 8px 25px rgba(255, 193, 7, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .skill-name {

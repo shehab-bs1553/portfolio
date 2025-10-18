@@ -9,19 +9,51 @@
 
 <section class="experience-details">
   <div class="container">
-    <div class="timeline">
-      <div class="timeline-item" *ngFor="let item of timeline">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <div class="timeline-header">
-            <h3 class="timeline-title">{{ item.title }}</h3>
-            <span class="timeline-date">{{ item.date }}</span>
+    <!-- Work Experience Section -->
+    <div class="section-container">
+      <h2 class="section-title">Work Experience</h2>
+      <div class="timeline">
+        @for (item of workExperience; track item.title) {
+          <div class="timeline-item">
+            <div class="timeline-marker work-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">{{ item.title }}</h3>
+                <span class="timeline-date">{{ item.date }}</span>
+              </div>
+              <p class="timeline-description">{{ item.description }}</p>
+              <div class="timeline-tags">
+                @for (tag of item.tags; track tag) {
+                  <span class="tag">{{ tag }}</span>
+                }
+              </div>
+            </div>
           </div>
-          <p class="timeline-description">{{ item.description }}</p>
-          <div class="timeline-tags">
-            <span class="tag" *ngFor="let tag of item.tags">{{ tag }}</span>
+        }
+      </div>
+    </div>
+
+    <!-- Education Section -->
+    <div class="section-container">
+      <h2 class="section-title">Education</h2>
+      <div class="timeline">
+        @for (item of education; track item.title) {
+          <div class="timeline-item">
+            <div class="timeline-marker education-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">{{ item.title }}</h3>
+                <span class="timeline-date">{{ item.date }}</span>
+              </div>
+              <p class="timeline-description">{{ item.description }}</p>
+              <div class="timeline-tags">
+                @for (tag of item.tags; track tag) {
+                  <span class="tag">{{ tag }}</span>
+                }
+              </div>
+            </div>
           </div>
-        </div>
+        }
       </div>
     </div>
   </div>

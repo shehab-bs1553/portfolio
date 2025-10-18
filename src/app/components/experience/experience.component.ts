@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './experience.component.scss'
 })
 export class ExperienceComponent implements OnInit {
-  timeline = [
+  workExperience = [
     {
       title: 'Software Engineer I',
       date: 'Aug 2024 - Present',
@@ -21,7 +21,10 @@ export class ExperienceComponent implements OnInit {
       date: 'Apr 2024 - Jul 2024',
       description: 'Assisted in developing backend modules using .NET Core and Entity Framework. Supported NopCommerce plugin development for AI-integrated features.',
       tags: ['.NET Core', 'Entity Framework', 'NopCommerce', 'API Development']
-    },
+    }
+  ];
+
+  education = [
     {
       title: 'B.Sc. in Computer Science and Engineering',
       date: '2019 - 2024',
@@ -33,6 +36,12 @@ export class ExperienceComponent implements OnInit {
       date: '2016 - 2018',
       description: 'Completed HSC from Monipur Uchcha Vidyalaya and College. Studied Science group with focus on Mathematics, Physics, and Chemistry.',
       tags: ['Science', 'Mathematics', 'Physics', 'Chemistry']
+    },
+    {
+      title: 'Secondary School Certificate (SSC)',
+      date: '2014 - 2016',
+      description: 'Completed SSC from Adarsha High School, Kaitola, Bera, Pabna with GPA 5.0 out of 5. Studied Science group with excellent academic performance.',
+      tags: ['Science', 'Mathematics', 'Physics', 'Chemistry', 'Biology']
     }
   ];
 
