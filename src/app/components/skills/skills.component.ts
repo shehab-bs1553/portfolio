@@ -54,6 +54,16 @@ export class SkillsComponent implements OnInit {
         { name: 'NopCommerce', level: 85 },
         { name: 'PostgreSQL', level: 80 }
       ]
+    },
+    {
+      name: 'Workflow & Automation',
+      skills: [
+        { name: 'N8N', level: 70 },
+        { name: 'MCP Server', level: 75 },
+        { name: 'Workflow Automation', level: 70 },
+        { name: 'API Integration', level: 70 },
+        { name: 'AI Agent Integration', level: 75 }
+      ]
     }
   ];
 
