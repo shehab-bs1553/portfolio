@@ -41,16 +41,18 @@
 <section class="projects-grid">
   <div class="container">
     <div class="projects-container">
-      <div 
-        class="project-card" 
-        *ngFor="let project of filteredProjects"
-        [@fadeInUp]>
+      @for (project of filteredProjects; track project.id) {
+        <div 
+          class="project-card" 
+          [@fadeInUp]>
         <div class="project-image">
           <div class="project-overlay">
             <div class="project-actions">
-              <a [href]="project.liveUrl" target="_blank" class="action-btn" *ngIf="project.liveUrl">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
+              @if (project.liveUrl) {
+                <a [href]="project.liveUrl" target="_blank" class="action-btn">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              }
               <a [href]="project.githubUrl" target="_blank" class="action-btn">
                 <i class="fab fa-github"></i>
               </a>
@@ -66,25 +68,29 @@
           <h3 class="project-title">{{ project.title }}</h3>
           <p class="project-description">{{ project.description }}</p>
           
-          <div class="project-details" *ngIf="project.outcomes">
-            <div class="detail-section">
-              <h4 class="detail-title">Outcomes</h4>
-              <p class="detail-content">{{ project.outcomes }}</p>
+          @if (project.outcomes) {
+            <div class="project-details">
+              <div class="detail-section">
+                <h4 class="detail-title">Outcomes</h4>
+                <p class="detail-content">{{ project.outcomes }}</p>
+              </div>
+              <div class="detail-section">
+                <h4 class="detail-title">Challenges</h4>
+                <p class="detail-content">{{ project.challenges }}</p>
+              </div>
+              <div class="detail-section">
+                <h4 class="detail-title">Impact</h4>
+                <p class="detail-content">{{ project.impact }}</p>
+              </div>
             </div>
-            <div class="detail-section">
-              <h4 class="detail-title">Challenges</h4>
-              <p class="detail-content">{{ project.challenges }}</p>
-            </div>
-            <div class="detail-section">
-              <h4 class="detail-title">Impact</h4>
-              <p class="detail-content">{{ project.impact }}</p>
-            </div>
-          </div>
+          }
           
           <div class="project-tech">
-            <span class="tech-tag" *ngFor="let tech of project.technologies">
-              {{ tech }}
-            </span>
+            @for (tech of project.technologies; track tech) {
+              <span class="tech-tag">
+                {{ tech }}
+              </span>
+            }
           </div>
           
           <div class="project-footer">
@@ -94,7 +100,8 @@
             </div>
           </div>
         </div>
-      </div>
+        </div>
+      }
     </div>
   </div>
 </section>
