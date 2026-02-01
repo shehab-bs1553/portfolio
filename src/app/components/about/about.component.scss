@@ -25,11 +25,28 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
-  align-items: center;
+  align-items: start;
+  min-width: 0;
 }
 
 .about-text {
   text-align: justify;
+  min-width: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.about-image {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+.image-container {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .section-title {
@@ -44,6 +61,9 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   color: #cbd5e1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .profile-card {
@@ -57,6 +77,10 @@
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .profile-card::before {
@@ -83,10 +107,9 @@
 
 .profile-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
   margin-bottom: 1.2rem;
-  text-align: left;
 }
 
 .profile-avatar {
@@ -131,6 +154,15 @@
 
 .profile-info {
   flex: 1;
+  min-width: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
 }
 
 .profile-name {
@@ -139,6 +171,8 @@
   margin-bottom: 0.5rem;
   color: #f1f5f9;
   line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .profile-title {
@@ -157,9 +191,13 @@
 .profile-location {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   color: #94a3b8;
   font-size: 0.9rem;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .profile-location i {
@@ -274,7 +312,8 @@
   display: flex;
   gap: 0.6rem;
   justify-content: space-between;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  min-width: 0;
 }
 
 .achievement-tag {
@@ -287,14 +326,18 @@
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
-  flex: 1;
-  min-width: 0;
+  flex: 1 1 auto;
+  min-width: 100px;
+  max-width: 100%;
   text-align: center;
   position: relative;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
 }
 
 
@@ -307,6 +350,9 @@
   font-size: 0.9rem;
   font-weight: 600;
   color: #f1f5f9;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
 }
 
 .achievement-tag small {
@@ -364,11 +410,18 @@
 
 .profile-cta {
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .contact-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   padding: 0.8rem 1.5rem;
   background: linear-gradient(135deg, #60a5fa, #3b82f6);
@@ -382,6 +435,11 @@
   box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 180px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 
@@ -398,6 +456,7 @@
 .resume-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   padding: 0.8rem 1.5rem;
   background: linear-gradient(135deg, #10b981, #059669);
@@ -412,7 +471,12 @@
   position: relative;
   overflow: hidden;
   text-decoration: none;
-  margin-left: 1rem;
+  margin-left: 0.8rem;
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 180px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 
@@ -435,6 +499,40 @@
 
 
 
+
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .achievement-tags {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .achievement-tag {
+    flex: 1 1 calc(33.333% - 0.4rem);
+    min-width: 120px;
+  }
+
+  .profile-cta {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .contact-btn, .resume-btn {
+    flex: 0 1 auto;
+    min-width: 200px;
+    max-width: 250px;
+  }
+
+  .resume-btn {
+    margin-left: 0;
+  }
+}
 
 @media (max-width: 768px) {
   .about-grid {
@@ -465,25 +563,51 @@
 
   .profile-header {
     flex-direction: column;
+    align-items: center;
     text-align: center;
     gap: 1rem;
+    width: 100%;
   }
 
   .profile-avatar {
     width: 70px;
     height: 70px;
+    flex-shrink: 0;
+  }
+
+  .profile-info {
+    width: 100%;
+    align-items: center;
+    text-align: center;
   }
 
   .profile-name {
     font-size: 1.3rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
   }
 
   .profile-title {
     font-size: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
   }
 
   .profile-company {
     font-size: 0.85rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+
+  .profile-location {
+    justify-content: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    text-align: center;
   }
 
   .profile-stats {
@@ -513,12 +637,12 @@
 
   .achievement-tags {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     gap: 0.6rem;
   }
 
   .achievement-tag {
-    min-width: 100px;
+    min-width: 100%;
     padding: 0.6rem 1rem;
   }
 
@@ -537,11 +661,25 @@
   .contact-btn, .resume-btn {
     padding: 0.7rem 1.2rem;
     font-size: 0.9rem;
-    margin: 0.3rem;
+    margin: 0.3rem 0;
+    width: 100%;
+    max-width: 280px;
+    min-width: 200px;
+    box-sizing: border-box;
+    white-space: normal;
+    word-wrap: break-word;
   }
 
   .profile-cta {
     margin-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .resume-btn {
+    margin-left: 0;
   }
 }
 
@@ -565,10 +703,43 @@
   .profile-avatar {
     width: 60px;
     height: 60px;
+    flex-shrink: 0;
+  }
+
+  .profile-header {
+    gap: 0.8rem;
+  }
+
+  .profile-info {
+    width: 100%;
   }
 
   .profile-name {
     font-size: 1.1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+
+  .profile-title {
+    font-size: 0.9rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+
+  .profile-company {
+    font-size: 0.8rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+
+  .profile-location {
+    font-size: 0.8rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
   }
 
   .achievement-tag {
@@ -579,7 +750,29 @@
   .contact-btn, .resume-btn {
     padding: 0.6rem 1rem;
     font-size: 0.85rem;
-    margin: 0.2rem;
+    margin: 0.2rem 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 180px;
+    box-sizing: border-box;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  .profile-cta {
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .resume-btn {
+    margin-left: 0;
+  }
+
+  .achievement-tag {
+    min-width: 100%;
+    padding: 0.5rem 0.8rem;
   }
 }
 
