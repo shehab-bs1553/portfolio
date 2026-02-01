@@ -13,8 +13,8 @@ export class ExperienceComponent implements OnInit {
     {
       title: 'Software Engineer II',
       date: 'Jan 2026 - Present',
-      description: 'Lead development of intelligent and scalable backend systems using .NET and FastAPI. Architect and implement advanced AI-powered solutions including Semantic Kernel, LangGraph, and Agentic AI workflows. Mentor junior developers and drive technical excellence.',
-      tags: ['.NET', 'FastAPI', 'Semantic Kernel', 'LangGraph', 'AI', 'Leadership']
+      description: 'Lead development of intelligent and scalable backend systems using .NET and FastAPI. Architect and implement advanced AI-powered solutions including LangGraph and Agentic AI workflows. Mentor junior developers and drive technical excellence.',
+      tags: ['.NET', 'FastAPI', 'LangGraph', 'AI', 'GraphQL', 'Microservice', 'MVC', 'Design Pattern', 'Leadership']
     },
     {
       title: 'Software Engineer I',

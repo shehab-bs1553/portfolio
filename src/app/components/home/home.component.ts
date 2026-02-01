@@ -37,6 +37,16 @@ export class HomeComponent implements OnInit {
       name: 'Python',
       icon: 'fab fa-python',
       description: 'Building intelligent systems and data analysis solutions'
+    },
+    {
+      name: 'Microservice',
+      icon: 'fas fa-server',
+      description: 'Designing and implementing scalable microservices architecture'
+    },
+    {
+      name: 'GraphQL',
+      icon: 'fas fa-project-diagram',
+      description: 'Building efficient APIs with GraphQL query language'
     }
   ];
 

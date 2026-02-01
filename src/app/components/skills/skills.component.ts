@@ -52,7 +52,8 @@ export class SkillsComponent implements OnInit {
         { name: 'Azure', level: 75 },
         { name: 'NopCommerce', level: 85 },
         { name: 'PostgreSQL', level: 80 },
-        { name: 'Microservice', level: 85 }
+        { name: 'Microservice', level: 85 },
+        { name: 'Design Pattern', level: 80 }
       ]
     },
     {
