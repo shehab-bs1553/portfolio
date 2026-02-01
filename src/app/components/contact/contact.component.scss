@@ -220,12 +220,10 @@
   color: #f1f5f9;
 }
 
-.form-input:focus,
-.form-textarea:focus {
+.form-input:focus, .form-textarea:focus {
   outline: none;
   border-color: #60a5fa;
   box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
-  background: #475569;
 }
 
 .form-textarea {
@@ -266,6 +264,7 @@
 .btn-primary:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+  transform: none;
 }
 
 .btn-large {
@@ -332,9 +331,6 @@
   margin-bottom: 1rem;
 }
 
-.hidden {
-  display: none;
-}
 
 @media (max-width: 768px) {
   .contact-hero {
