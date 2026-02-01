@@ -30,7 +30,8 @@ export class SkillsComponent implements OnInit {
         { name: 'Angular', level: 65 },
         { name: 'FastAPI', level: 85 },
         { name: 'Entity Framework', level: 80 },
-        { name: 'ASP.NET Core', level: 80 }
+        { name: 'ASP.NET Core', level: 80 },
+        { name: 'GraphQL', level: 75 }
       ]
     },
     {
@@ -50,7 +51,9 @@ export class SkillsComponent implements OnInit {
         { name: 'Git', level: 85 },
         { name: 'Azure', level: 75 },
         { name: 'NopCommerce', level: 85 },
-        { name: 'PostgreSQL', level: 80 }
+        { name: 'PostgreSQL', level: 80 },
+        { name: 'Microservice', level: 85 },
+        { name: 'Design Pattern', level: 80 }
       ]
     },
     {

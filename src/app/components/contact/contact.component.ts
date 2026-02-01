@@ -56,7 +56,7 @@ export class ContactComponent implements OnInit {
     },
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/md-shihab-hossain-908458212/',
+      url: 'https://www.linkedin.com/in/md-shehab-hossain-908458212/',
       icon: 'fab fa-linkedin'
     },
     {

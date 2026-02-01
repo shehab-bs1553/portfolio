@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,6 +9,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
+  @ViewChild('navMenu', { static: false }) navMenu?: ElementRef;
+  @ViewChild('navToggle', { static: false }) navToggle?: ElementRef;
+
   isScrolled = false;
   isMenuOpen = false;
   activeSection = 'home';
@@ -19,6 +22,26 @@ export class HeaderComponent implements OnInit {
     this.updateActiveSection();
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    // Close menu when resizing to desktop size
+    if (window.innerWidth > 768 && this.isMenuOpen) {
+      this.isMenuOpen = false;
+    }
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    // Close menu when clicking outside
+    if (this.isMenuOpen && 
+        this.navMenu?.nativeElement && 
+        this.navToggle?.nativeElement &&
+        !this.navMenu.nativeElement.contains(event.target) &&
+        !this.navToggle.nativeElement.contains(event.target)) {
+      this.closeMenu();
+    }
+  }
+
   ngOnInit(): void {
     // Initialize header functionality
     this.updateActiveSection();
@@ -26,10 +49,17 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
+    // Prevent body scroll when menu is open
+    if (this.isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
   }
 
   closeMenu(): void {
     this.isMenuOpen = false;
+    document.body.style.overflow = '';
   }
 
   updateActiveSection(): void {

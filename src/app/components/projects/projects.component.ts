@@ -101,6 +101,21 @@ export class ProjectsComponent implements OnInit {
       outcomes: '5+ custom plugins developed, 40% customer engagement increase, 60% reduction in e-commerce feature development time',
       challenges: 'NopCommerce architecture complexity, plugin compatibility issues, AI integration with existing systems, performance optimization',
       impact: 'Extended e-commerce functionality, improved customer interaction, increased sales conversion rates, streamlined development processes'
+    },
+    {
+      id: 7,
+      title: 'KPI Template',
+      description: 'Developed a comprehensive backend system for KPI (Key Performance Indicator) template management. Built scalable APIs for creating, managing, and tracking performance metrics with flexible template configurations.',
+      category: 'Backend',
+      technologies: ['.NET', 'FastAPI', 'PostgreSQL', 'GraphQL', 'Microservice', 'Entity Framework'],
+      date: 'Sep 2025 - Present',
+      status: 'in-progress',
+      icon: 'fas fa-chart-line',
+      liveUrl: null,
+      githubUrl: 'https://github.com/shehab-bs1553',
+      outcomes: 'Scalable KPI management system, flexible template configurations, real-time performance tracking, efficient data processing',
+      challenges: 'Complex KPI calculation logic, flexible template system design, performance optimization for large datasets, microservices architecture implementation',
+      impact: 'Streamlined KPI management processes, enabled customizable performance tracking, improved data analysis capabilities, enhanced reporting efficiency'
     }
   ];
 

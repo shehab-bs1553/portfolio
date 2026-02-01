@@ -10,7 +10,7 @@
         </a>
       </div>
       
-      <div class="nav-menu" [class.active]="isMenuOpen">
+      <div class="nav-menu" #navMenu [class.active]="isMenuOpen">
         <ul class="nav-list">
           <li class="nav-item">
             <a href="#home" class="nav-link" (click)="closeMenu()" 
@@ -39,7 +39,7 @@
         </ul>
       </div>
       
-      <div class="nav-toggle" (click)="toggleMenu()">
+      <div class="nav-toggle" #navToggle (click)="toggleMenu()">
         <span class="hamburger" [class.active]="isMenuOpen"></span>
       </div>
     </div>
