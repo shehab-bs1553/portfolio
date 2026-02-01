@@ -11,10 +11,22 @@ import { CommonModule } from '@angular/common';
 export class ExperienceComponent implements OnInit {
   workExperience = [
     {
+      title: 'Software Engineer II',
+      date: 'Jan 2026 - Present',
+      description: 'Lead development of intelligent and scalable backend systems using .NET and FastAPI. Architect and implement advanced AI-powered solutions including Semantic Kernel, LangGraph, and Agentic AI workflows. Mentor junior developers and drive technical excellence.',
+      tags: ['.NET', 'FastAPI', 'Semantic Kernel', 'LangGraph', 'AI', 'Leadership']
+    },
+    {
       title: 'Software Engineer I',
-      date: 'Aug 2024 - Present',
+      date: 'Jan 2025 - Dec 2025',
       description: 'Develop intelligent and scalable backend systems using .NET and FastAPI. Build and integrate AI-powered solutions including Semantic Kernel, LangGraph, and Agentic AI workflows.',
       tags: ['.NET', 'FastAPI', 'Semantic Kernel', 'LangGraph', 'AI']
+    },
+    {
+      title: 'Associate Software Engineer',
+      date: 'Aug 2024 - Dec 2024',
+      description: 'Developed backend modules and APIs using .NET and Entity Framework. Contributed to NopCommerce plugin development and integrated AI-powered features. Collaborated with team members on scalable solutions.',
+      tags: ['.NET', 'Entity Framework', 'NopCommerce', 'API Development', 'Backend Development']
     },
     {
       title: 'Software Engineer Trainee',
